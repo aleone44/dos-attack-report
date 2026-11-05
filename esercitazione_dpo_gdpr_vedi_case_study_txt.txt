@@ -1,0 +1,126 @@
+Questa esercitazione simula l'attività consultiva e di controllo di un DPO (Data Protection Officer - Responsabile della Protezione dei Dati) ai sensi degli articoli 38 e 39 del Regolamento (UE) 2016/679 (GDPR). La struttura fornisce tutti i riferimenti normativi necessari per affrontare il caso anche senza una pregressa formazione giuridica, guidando l'analisi attraverso la metodologia applicata dalle Autorità di controllo.
+
+---
+
+## Caso di Studio: Trattamento Automatizzato e Geolocalizzazione nel Settore Logistico
+
+> Riferimento Giurisprudenziale: Il caso ricalca il provvedimento sanzionatorio n. 234 del 10 giugno 2021 emesso dal Garante per la Protezione dei Dati Personali nei confronti della società Foodinho S.r.l. (sanzione di 2,6 milioni di euro per violazioni inerenti al trattamento dei dati dei ciclofattorini tramite piattaforme algoritmiche).
+
+### Contesto Operativo
+Assumi l'incarico di DPO presso la società "VeloceEat S.r.l." (che agisce in qualità di Titolare del trattamento, ossia il soggetto che decide scopi e modalità dell'uso dei dati), azienda che gestisce consegne a domicilio avvalendosi di 500 collaboratori (nel lessico del GDPR definiti Interessati, ovvero le persone fisiche a cui si riferiscono i dati) tramite un'applicazione proprietaria installata sui loro dispositivi mobili.
+
+La Direzione Operativa sottopone alla tua valutazione preventiva l'architettura di un nuovo aggiornamento software, il cui rilascio in produzione è previsto entro 24 ore. Le specifiche tecniche prevedono quanto segue:
+1. Acquisizione continua delle coordinate biometriche e spaziali: Il sistema effettuerà il campionamento delle coordinate GPS dei dispositivi dei collaboratori con una frequenza di 15 secondi, in modalità continuativa (24 ore su 24), anche al di fuori delle fasce orarie di servizio, al fine di elaborare modelli statistici predittivi per la futura copertura dei turni.
+2. Sistema di Scoring Automatizzato: Un algoritmo proprietario attribuirà un indice di affidabilità a ciascun collaboratore. Il rifiuto di una commessa in condizioni meteorologiche avverse, la mancata presa in carico per motivi di salute o uno scostamento superiore a 180 secondi rispetto ai tempi di percorrenza stimati comporteranno una decurtazione automatica del punteggio. Al raggiungimento di una soglia critica predefinita, il sistema eseguirà la disattivazione automatica dell'account (risoluzione de facto del rapporto contrattuale), senza l'intervento o la revisione da parte di un operatore umano.
+3. Omissione delle specifiche di funzionamento: Per prevenire contestazioni sindacali o comportamenti elusivi da parte dei collaboratori, la Direzione ha disposto di non integrare la documentazione contrattuale con le logiche di funzionamento dell'algoritmo di scoring.
+4. Configurazione dei privilegi di accesso: L'intero organico amministrativo della società (50 dipendenti, inclusi gli addetti alla contabilità generale e al marketing) disporrà di credenziali con privilegi di visualizzazione in tempo reale della mappa dei tracciamenti GPS e dello storico delle comunicazioni testuali tra i collaboratori e il supporto operativo.
+
+Obiettivo dell'esercitazione: Esaminare le quattro specifiche progettuali, individuare i profili di non conformità rispetto al dettato del GDPR (e della normativa nazionale sul controllo a distanza dei lavoratori, Art. 4 Legge 300/1970, richiamata dall'Art. 88 GDPR) e redigere le prescrizioni correttive vincolanti per il Titolare del trattamento.
+
+---
+
+## Modulo 1: Liceità, Limitazione delle Finalità e Minimizzazione
+
+### Riferimento Normativo: Articoli 5 (par. 1, lett. b, c) e 25 del GDPR
+Il trattamento dei dati personali deve rispettare due pilastri fondamentali:
+* Principio di Minimizzazione dei dati (Art. 5, par. 1, lett. c): I dati raccolti devono essere adeguati, pertinenti e limitati a quanto strettamente necessario rispetto alle finalità per le quali sono trattati. Non è consentito raccogliere dati in via preventiva o in misura eccedente rispetto allo scopo contrattuale.
+* Privacy by Design e by Default (Art. 25): Il Titolare deve configurare i sistemi informatici affinché, per impostazione predefinita, vengano trattati solo i dati personali necessari per ogni specifica finalità e per il solo periodo strettamente indispensabile.
+
+### Analisi del Punto 1
+Esamina la specifica relativa al tracciamento GPS ogni 15 secondi su base continuativa (24/7) anche al di fuori dell'orario di lavoro.
+
+Quesiti guida per la valutazione tecnica:
+* L'acquisizione della posizione geografica del lavoratore durante i periodi di inattività lavorativa risulta necessaria e proporzionata rispetto all'esecuzione del contratto di consegna?
+* La frequenza di campionamento a 15 secondi è giustificata dalle esigenze logistiche o l'obiettivo di tracciare lo stato della commessa può essere raggiunto con modalità meno invasive per la sfera privata dell'interessato?
+
+> Esercizio 1: 
+> Formula la prescrizione tecnica da imporre agli sviluppatori dell'applicazione per ricondurre il tracciamento geografico entro i limiti dei principi di minimizzazione e Privacy by Default.
+
+---
+
+## Modulo 2: Obblighi di Trasparenza e Informazione
+
+### Riferimento Normativo: Articoli 12, 13 e 14 del GDPR
+Il principio di trasparenza impone che l'Interessato sia sempre messo a conoscenza dell'esistenza di un trattamento di dati che lo riguarda prima che questo abbia inizio. Attraverso l'Informativa sul trattamento dei dati, il Titolare deve comunicare in forma concisa, trasparente e intelligibile: le finalità del trattamento, la base giuridica (il fondamento legale che autorizza l'uso dei dati), i tempi di conservazione e, qualora sia presente un processo decisionale automatizzato, informazioni significative sulla logica utilizzata, nonché l'importanza e le conseguenze previste di tale trattamento per l'interessato (Art. 13, par. 2, lett. f).
+
+### Analisi del Punto 3
+Esamina la direttiva aziendale volta a omettere qualsiasi comunicazione ai collaboratori in merito ai criteri di valutazione algoritmica.
+
+Quesiti guida per la valutazione tecnica:
+* Un trattamento di dati finalizzato alla valutazione delle performance lavorative può essere considerato lecito se condotto all'insaputa dei soggetti valutati?
+* Quali elementi specifici dell'algoritmo devono essere obbligatoriamente esplicitati nella documentazione fornita al lavoratore prima della messa in produzione del sistema?
+
+> Esercizio 2: 
+> Indica quali adempimenti documentali il Titolare deve predisporre e notificare agli Interessati prima del rilascio dell'aggiornamento, specificando il contenuto minimo relativo al funzionamento del sistema di scoring.
+
+---
+
+## Modulo 3: Processi Decisionali Automatizzati e Categorie Particolari di Dati
+
+### Riferimento Normativo: Articoli 9 e 22 del GDPR
+* Processo decisionale automatizzato e profilazione (Art. 22): L'Interessato ha il diritto di non essere sottoposto a una decisione basata unicamente sul trattamento automatizzato (senza alcun coinvolgimento umano) che produca effetti giuridici che lo riguardano o che incida in modo analogo significativamente sulla sua persona (quale la risoluzione di un contratto o l'esclusione dall'assegnazione dei turni lavorativi). Anche qualora tale sistema sia necessario per l'esecuzione del contratto, il Titolare deve adottare misure adeguate per tutelare i diritti dell'interessato, garantendo almeno:
+  1. Il diritto di ottenere l'intervento umano da parte del Titolare;
+  2. Il diritto di esprimere la propria opinione;
+  3. Il diritto di contestare la decisione.
+* Categorie particolari di dati personali (Art. 9): I dati relativi alla salute (incluse le assenze per malattia o infortunio) godono di un regime di tutela rafforzato. Il loro utilizzo all'interno di sistemi di valutazione per applicare penalizzazioni costituisce un trattamento illecito e discriminatorio.
+
+### Analisi del Punto 2
+Esamina la specifica relativa alla decurtazione automatica del punteggio per malattia o ritardo e alla disattivazione automatizzata dell'account al raggiungimento della soglia critica.
+
+Quesiti guida per la valutazione tecnica:
+* La disattivazione dell'account eseguita autonomamente dal software produce "effetti giuridici o significativamente analoghi" sulla vita del lavoratore ai sensi dell'Art. 22?
+* In che modo il sistema algoritmico può distinguere un ritardo imputabile a negligenza da un ritardo causato da forza maggiore (es. sinistro stradale, guasto meccanico) in assenza di una procedura di verifica umana?
+* È conforme all'Art. 9 del GDPR alimentare le variabili di calcolo dell'algoritmo con i dati relativi allo stato di malattia del collaboratore?
+
+> Esercizio 3: 
+> Definisci le modifiche procedurali e architetturali necessarie per rendere il sistema di valutazione conforme agli articoli 9 e 22 del GDPR, elencando le garanzie procedurali da riconoscere al collaboratore.
+
+---
+
+## Modulo 4: Sicurezza del Trattamento e Controllo degli Accessi
+
+### Riferimento Normativo: Articoli 29 e 32 del GDPR
+* Sicurezza del trattamento (Art. 32): Il Titolare deve mettere in atto misure tecniche e organizzative adeguate per garantire un livello di sicurezza proporzionato al rischio, impedendo l'accesso non autorizzato o la divulgazione dei dati trattati.
+* Istruzione e autorizzazione agli accessi (Art. 29): Chiunque agisca sotto l'autorità del Titolare e abbia accesso a dati personali non può trattarli se non è stato formalmente autorizzato e istruito in tal senso. In ambito di sicurezza informatica, ciò si traduce nel principio del Privilegio Minimo (Need-to-Know): ciascun dipendente deve poter accedere esclusivamente ai set di dati strettamente indispensabili per l'espletamento delle proprie mansioni lavorative.
+
+### Analisi del Punto 4
+Esamina la configurazione che consente a tutti i 50 impiegati amministrativi di visualizzare in tempo reale i tracciati GPS e le comunicazioni del supporto operativo.
+
+Quesiti guida per la valutazione tecnica:
+* Sussiste una necessità operativa documentabile affinché il personale addetto alla contabilità o al marketing acceda ai dati di geolocalizzazione puntuale dei fattorini?
+* Quali rischi di violazione dei dati personali (Data Breach per accesso abusivo interno) si configurano mantenendo un'architettura priva di segregazione dei ruoli?
+
+> Esercizio 4: 
+> Formula le direttive per l'implementazione di una politica di controllo degli accessi basata sui ruoli (RBAC - Role-Based Access Control) per il database dell'applicazione.
+
+---
+
+## Parere Tecnico del DPO (Soluzioni e Prescrizioni Correttive)
+
+| Modulo | Violazione Accertata | Prescrizione Correttiva del DPO |
+| :--- | :--- | :--- |
+| 1. Geolocalizzazione | Violazione dei principi di minimizzazione (Art. 5, par. 1, lett. c) e di Privacy by Default (Art. 25). Il tracciamento continuativo 24/7 ed effettuato ogni 15 secondi eccede le finalità contrattuali e configura un controllo a distanza illecito (Art. 88 GDPR e Art. 4 L. 300/1970). | Inibizione del tracciamento continuativo. Il modulo GPS dell'applicazione deve essere disabilitato fuori dall'orario di servizio. Durante il turno, il rilevamento continuo deve essere sostituito da un'acquisizione puntuale (check-in) attivata esclusivamente in corrispondenza degli stati operativi della commessa (accettazione ordine, arrivo presso l'esercente, avvenuta consegna al cliente). |
+| 2. Trasparenza | Violazione degli obblighi di trasparenza e informazione (Artt. 12 e 13, par. 2, lett. f). L'occultamento delle logiche di valutazione impedisce agli interessati l'esercizio dei propri diritti. | Redazione e notifica dell'Informativa integrativa. Prima della messa in produzione, il Titolare deve fornire a tutti i collaboratori un'informativa dettagliata che espliciti i parametri utilizzati dall'algoritmo, il peso specifico di ciascuna variabile nel calcolo dello scoring e gli effetti derivanti dalle variazioni di punteggio. |
+| 3. Processo Automatizzato | Violazione del divieto di decisioni esclusivamente automatizzate (Art. 22) e trattamento illecito di categorie particolari di dati (Art. 9). | 1. Rimozione dei parametri sanitari: Escludere dal codice dell'algoritmo qualsiasi penalizzazione legata ad assenze per malattia, infortunio o esercizio del diritto di sciopero.<br>2. Presidio umano (Human-in-the-loop): Inibire il blocco automatico degli account. Qualsiasi sospensione deve essere subordinata alla verifica formale di un responsabile umano.<br>3. Procedura di contraddittorio: Implementare nell'app un canale dedicato che consenta al collaboratore di giustificare eventuali ritardi (es. traffico, guasti) e ottenere la rettifica del punteggio. |
+| 4. Sicurezza e Accessi | Violazione degli obblighi di sicurezza del trattamento (Art. 32) e di perimetrazione delle autorizzazioni interne (Art. 29). | Segregazione degli accessi e tracciamento (Logging). Configurare il sistema mediante profili di autorizzazione granulari. L'accesso ai dati di localizzazione e alle chat deve essere ristretto ai soli operatori del supporto logistico in turno, limitatamente alle singole commesse che presentano un ticket di assistenza attivo. Attivare i log di sistema per tracciare ogni accesso effettuato dagli operatori amministrativi. |
+
+---
+
+## Adempimento Preliminare Obbligatorio: La Valutazione d'Impatto (DPIA)
+
+Nel caso reale, l'Autorità Garante ha sanzionato la società anche per la violazione dell'Articolo 35 del GDPR, ovvero per la mancata redazione preventiva della DPIA (Data Protection Impact Assessment - Valutazione d'Impatto sulla Protezione dei Dati).
+
+Quadro normativo: Quando un trattamento prevede l'uso di nuove tecnologie e, considerati la natura, l'oggetto, il contesto e le finalità, presenta un rischio elevato per i diritti e le libertà delle persone fisiche, il Titolare del trattamento è obbligato a effettuare una DPIA prima di procedere al trattamento, acquisendo il parere formale del DPO (Art. 35, par. 2).
+
+Il caso in esame rende la DPIA obbligatoria per legge in quanto ricorrono tre criteri di rischio elevato individuati dalle Linee Guida europee (WP248 rev.01):
+1. Valutazione o assegnazione di un punteggio (scoring) relativo al rendimento professionale dell'interessato;
+2. Processo decisionale automatizzato che produce effetti giuridici o significativamente analoghi;
+3. Tracciamento sistematico dell'ubicazione di soggetti considerati interessati vulnerabili (i lavoratori, a causa dello squilibrio di potere contrattuale rispetto al datore di lavoro/committente).
+
+---
+
+### Esercizio Conclusivo: Redazione del Parere Formale del DPO
+Per completare l'esercitazione, redigi una nota formale (di circa 10-15 righe) indirizzata alla Direzione Operativa di VeloceEat S.r.l. con la quale, nell'esercizio delle tue funzioni ex Art. 39 GDPR:
+1. Esprimi parere negativo al rilascio in produzione dell'aggiornamento previsto per il giorno seguente;
+2. Richiedi la sospensione immediata del progetto per l'avvio della procedura di Valutazione d'Impatto (DPIA) ex Art. 35 GDPR;
+3. Sintetizzi le quattro prescrizioni vincolanti necessarie per sanare i profili di illiceità riscontrati.
