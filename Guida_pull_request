@@ -1,0 +1,25 @@
+1Accedi al repository
+Richiede un account GitHub
+Visita il link ufficiale del repository: aleone44/dos-attack-report. Assicurati di aver effettuato l'accesso con il tuo account GitHub.
+
+2
+Aggiungi il file
+Sopra l'elenco dei file, clicca sul pulsante Add file e seleziona Upload files dal menu a tendina. (Nota: GitHub creerà automaticamente un "Fork" del progetto sul tuo profilo, che è la procedura standard per proporre modifiche).
+
+3
+Carica il tuo report
+Trascina il file del tuo report nel riquadro centrale oppure clicca su "choose your files" per selezionarlo dal computer. Rinomina il file in modo che sia facilmente identificabile prima di caricarlo (ad esempio, report_nome_cognome.pdf).
+
+4
+Compila i dettagli della modifica
+Scorri in basso fino alla sezione Commit changes:
+
+Nel primo campo di testo, inserisci un titolo descrittivo (es. "Aggiunto report di [Tuo Nome Cognome]").
+
+Assicurati che sia selezionata l'opzione Create a new branch for this commit and start a pull request.
+
+Clicca sul pulsante verde Propose changes.
+
+5
+Invia la Pull Request
+Verrai reindirizzato a una nuova pagina. Clicca sul pulsante verde Create pull request. Il proprietario del repository riceverà la tua proposta, la valuterà e aggiungerà il tuo report al progetto principale.
