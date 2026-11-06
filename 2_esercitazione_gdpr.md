@@ -1,6 +1,6 @@
 # Esercizio Guidato: Audit di Conformità GDPR di un Sito Web
 
-Il presente documento definisce le specifiche operative per l'esecuzione di un audit tecnico e documentale finalizzato alla verifica della conformità di un sito web rispetto al Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679) e alla normativa ePrivacy.
+Il presente documento definisce le specifiche operative per l'esecuzione di un audit tecnico e documentale finalizzato alla verifica della conformità di un sito web rispetto al Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679) e alla direttiva ePrivacy.
 
 ---
 
