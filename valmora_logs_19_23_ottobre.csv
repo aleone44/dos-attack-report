@@ -1,0 +1,101 @@
+Timestamp,Source,Event ID,Description,Status
+2023-10-19 08:01:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 08:23:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 09:51:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 10:12:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 10:28:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 10:40:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 11:16:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 11:25:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 11:30:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 12:19:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 12:42:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 13:27:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 13:49:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 15:28:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 17:59:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-19 22:00:00,Backup_Agent,BKP-01,Backup Incrementale - NAS Locale,SUCCESS
+2023-10-19 23:00:00,Backup_Agent,BKP-02,Backup Immutabile - Cloud,SUCCESS
+2023-10-19 23:30:00,Backup_Agent,BKP-03,Backup Completo - Disco USB Offline,SUCCESS
+2023-10-19 23:45:00,System,SYS-05,Check manutenzione sistema,INFO
+2023-10-19 23:55:00,Antivirus,AV-01,Aggiornamento definizioni quotidiano,SUCCESS
+2023-10-20 08:57:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 09:00:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 10:15:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 10:30:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 11:21:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 11:23:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 12:39:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 12:56:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 13:33:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 13:50:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 14:25:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 15:00:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 16:11:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 16:26:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 17:15:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-20 22:00:00,Backup_Agent,BKP-01,Backup Incrementale - NAS Locale,SUCCESS
+2023-10-20 23:00:00,Backup_Agent,BKP-02,Backup Immutabile - Cloud,SUCCESS
+2023-10-20 23:30:00,System,SYS-09,Unità Disco USB Offline scollegata (Air-gapped),INFO
+2023-10-20 23:45:00,System,SYS-05,Check manutenzione sistema,INFO
+2023-10-20 23:55:00,Antivirus,AV-01,Aggiornamento definizioni quotidiano,SUCCESS
+2023-10-21 09:27:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 09:54:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 10:33:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 10:48:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 14:32:00,Firewall,FW-102,Multipli login VPN falliti da IP anomalo,WARNING
+2023-10-21 14:35:00,Firewall,FW-103,Login VPN riuscito da IP anomalo (Admin),WARNING
+2023-10-21 14:52:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 14:55:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 15:10:00,System,SYS-42,Privilege escalation - Utente aggiunto a Local Admins,CRITICAL
+2023-10-21 15:27:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 15:30:00,System,SYS-11,Accesso anomalo a grossi volumi di file su FileServer01,WARNING
+2023-10-21 15:40:00,System,SYS-11,Accesso anomalo a grossi volumi di file su FileServer01,WARNING
+2023-10-21 15:50:00,System,SYS-11,Accesso anomalo a grossi volumi di file su FileServer01,WARNING
+2023-10-21 16:00:00,System,SYS-11,Accesso anomalo a grossi volumi di file su FileServer01,WARNING
+2023-10-21 16:10:00,System,SYS-11,Accesso anomalo a grossi volumi di file su FileServer01,WARNING
+2023-10-21 16:48:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 16:52:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 17:15:00,System,SYS-01,Autenticazione utente standard,SUCCESS
+2023-10-21 22:00:00,Backup_Agent,BKP-01,Backup Incrementale - NAS Locale (Include file potenzialmente compromessi),SUCCESS
+2023-10-21 23:00:00,Backup_Agent,BKP-02,Backup Immutabile - Cloud,SUCCESS
+2023-10-21 23:10:00,Network,NET-01,Traffico in uscita anomalo rilevato (Possibile esfiltrazione),WARNING
+2023-10-21 23:15:00,Network,NET-01,Traffico in uscita anomalo rilevato (Possibile esfiltrazione),WARNING
+2023-10-21 23:20:00,Network,NET-01,Traffico in uscita anomalo rilevato (Possibile esfiltrazione),WARNING
+2023-10-21 23:25:00,Network,NET-01,Traffico in uscita anomalo rilevato (Possibile esfiltrazione),WARNING
+2023-10-21 23:30:00,Network,NET-01,Traffico in uscita anomalo rilevato (Possibile esfiltrazione),WARNING
+2023-10-22 02:15:00,Antivirus,AV-99,Protezione in tempo reale disabilitata dall'Amministratore,CRITICAL
+2023-10-22 03:00:00,System,SYS-99,Esecuzione VSSAdmin - Cancellazione copie shadow,CRITICAL
+2023-10-22 03:15:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 03:30:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 03:45:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 04:00:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 04:15:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 04:30:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 04:45:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 05:00:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 05:15:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 05:30:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 05:45:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 06:00:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 06:15:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 06:30:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 06:45:00,System,SYS-88,Modifica massiva estensioni file rilevata (.locked),CRITICAL
+2023-10-22 08:00:00,System,SYS-00,Nota di riscatto ransomware creata sui Desktop,CRITICAL
+2023-10-22 22:00:00,Backup_Agent,BKP-01,Backup Incrementale - NAS Locale,FAILED - Volume NAS non trovato / Formattato
+2023-10-22 22:30:00,System,SYS-NAS,Credenziali NAS compromesse - Condivisione di backup eliminata,CRITICAL
+2023-10-22 23:00:00,Backup_Agent,BKP-02,Backup Immutabile - Cloud,FAILED - Agente offline / bloccato
+2023-10-22 23:30:00,System,SYS-ERR,Service failure - Servizi di sistema multipli irraggiungibili,ERROR
+2023-10-22 23:40:00,System,SYS-ERR,Service failure - Servizi di sistema multipli irraggiungibili,ERROR
+2023-10-22 23:50:00,System,SYS-ERR,Service failure - Servizi di sistema multipli irraggiungibili,ERROR
+2023-10-23 00:00:00,System,SYS-ERR,Service failure - Servizi di sistema multipli irraggiungibili,ERROR
+2023-10-23 06:00:00,Security_Team,SEC-01,Attivazione Protocollo di Incident Response,INFO
+2023-10-23 06:15:00,Firewall,FW-99,Accessi VPN disabilitati globalmente,INFO
+2023-10-23 06:30:00,EDR,EDR-01,Host isolato dalla rete con successo,SUCCESS
+2023-10-23 06:35:00,EDR,EDR-01,Host isolato dalla rete con successo,SUCCESS
+2023-10-23 06:40:00,EDR,EDR-01,Host isolato dalla rete con successo,SUCCESS
+2023-10-23 06:45:00,EDR,EDR-01,Host isolato dalla rete con successo,SUCCESS
+2023-10-23 06:50:00,EDR,EDR-01,Host isolato dalla rete con successo,SUCCESS
+2023-10-23 07:30:00,Security_Team,SEC-02,Comunicazione con server Command&Control bloccata al firewall,SUCCESS
+2023-10-23 08:00:00,Security_Team,SEC-03,Fase di contenimento verificata. L'attaccante è isolato.,INFO
+2023-10-23 08:15:00,System,SYS-04,Avviata acquisizione immagine forense per indagini,INFO

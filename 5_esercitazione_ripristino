@@ -1,0 +1,38 @@
+Esercizio Pratico: Il Ritorno al Lavoro di Valmora
+In linea con la consegna aziendale, per riportare l'azienda all'operatività in totale sicurezza a partire dalla mattina di venerdì,
+momento in cui l'attaccante risulta contenuto sul network.   
+
+Scenario:
+Valmora ha subito un attacco informatico di tipo ransomware. Il team di sicurezza ha appena isolato la rete e bloccato l'attaccante. 
+Come team IT, il vostro compito non è l'analisi forense avanzata, ma capire quando è iniziato l'attacco, 
+identificare quali backup sono integri e redigere un piano di ripristino operativo.
+
+Fase 1: Triage e Ricostruzione della Timeline 
+Azione: Analizzate il file valmora_logs_19_23_ottobre.csv.
+Individuate in quale data e tramite quale vettore l'attaccante è entrato per la prima volta nella rete di Valmora.
+Identificate il momento in cui i difensori hanno perso visibilità (quando l'attaccante ha disattivato i controlli di sicurezza).
+Segnate l'orario esatto in cui è iniziata la fase distruttiva (cifratura ed esecuzione del ransomware).
+Domanda guida: Sulla base di questa timeline, da quale data dobbiamo far partire il ripristino per assicurarci di non reinstallare eventuali backdoor lasciate dall'attaccante?
+
+Fase 2: Mappatura e Verifica dei Backup 
+L'infrastruttura di Valmora prevede tre tipologie di backup. Analizzando i log dei giorni 20, 21 e 22 ottobre, classificate ogni backup in una di queste due categorie: Valido/Sicuro o Non Valido/Compromesso.
+Backup su NAS Locale (Incrementale Quotidiano):
+Stato al 22 Ottobre: Valido o Non Valido?
+Analisi: È utilizzabile per il ripristino o l'attaccante lo ha distrutto/cifrato?
+Backup su Disco USB Offline (Completo Settimanale):
+Stato: Valido o Non Valido?
+Analisi: Quando è stato scollegato l'ultima volta? Rischia di contenere l'infezione?
+Backup Cloud Immutabile (Quotidiano):
+Stato: Valido o Non Valido?
+Analisi: L'agente di backup ha fallito il 22 ottobre. Tuttavia, il concetto di "immutabilità" protegge i dati salvati nei giorni precedenti (es. 20 ottobre). Può essere utilizzato?
+Domanda guida: Quale fonte di backup utilizzerete come sorgente principale per rimettere in piedi Valmora e di quale data?
+
+Fase 3: Redazione del Piano di Ripristino 
+Ora che sapete quando è iniziata l'infezione e quali backup sono integri, stilate i 5 passaggi sequenziali per il ripristino ("Il ritorno al lavoro"). 
+Non collegate i server recuperati alla rete prima di averli bonificati!
+Template del Piano di Ripristino (da completare):
+Isolamento dell'ambiente di recupero: Creare una rete segregata (VLAN di recovery) disconnessa da internet e dai client infetti.
+Scelta e montaggio della sorgente sicura: Selezionare il backup [INSERIRE QUALE BACKUP E DI QUALE DATA] per ripristinare i server principali (es. FileServer, Domain Controller).
+Bonifica pre-produzione (Wipe): [INSERIRE AZIONE SUI SERVER ORIGINALI]. Non sovrascrivere direttamente i sistemi infetti, ma piallare i server o creare nuove macchine virtuali pulite.
+Patch e Chiusura della Falla: Prima di rimettere online l'ambiente, aggiornare il firewall (punto di ingresso iniziale) e forzare il reset globale di tutte le password, specialmente degli account compromessi (es. Admin e account VPN).
+Ricollegamento graduale: Ripristinare i servizi critici uno alla volta, monitorando i log per individuare eventuali tentativi di riattivazione del malware. Mantenere l'EDR in modalità restrittiva.
